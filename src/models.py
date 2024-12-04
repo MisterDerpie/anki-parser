@@ -18,4 +18,4 @@ class OutputNote(BaseModel):
     deck_name: str
 
     def toOutputString(self) -> str:
-        return f'{{"source":"{self.source}","target":"{self.target}"}}'
+        return f'{{"source":"{self.source}","target":"{self.target}","deck_name":"{self.deck_name}"}}'
