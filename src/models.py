@@ -7,6 +7,7 @@ class CrowdAnkiNote(BaseModel):
 
 
 class CrowdAnkiJson(BaseModel):
+    name: str
     children: List[CrowdAnkiJson]
     notes: List[CrowdAnkiNote]
 
@@ -14,6 +15,7 @@ class CrowdAnkiJson(BaseModel):
 class OutputNote(BaseModel):
     source: str
     target: str
+    deck_name: str
 
     def toOutputString(self) -> str:
         return f'{{"source":"{self.source}","target":"{self.target}"}}'

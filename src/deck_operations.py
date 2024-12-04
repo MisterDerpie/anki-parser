@@ -36,7 +36,9 @@ def deck_to_output_notes(json: CrowdAnkiJson) -> List[OutputNote]:
                 fields = note.fields
                 output_notes.append(
                     OutputNote(
-                        source=html_remove(fields[0]), target=html_remove(fields[1])
+                        source=html_remove(fields[0]),
+                        target=html_remove(fields[1]),
+                        deck_name=json.name,
                     )
                 )
 
